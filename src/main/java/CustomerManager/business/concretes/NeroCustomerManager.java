@@ -12,9 +12,9 @@ import org.springframework.stereotype.Service;
 public class NeroCustomerManager extends CustomerManager {
     private final TCIdentityValidator validator;
 
-    NeroCustomerManager(CustomerRepository repository, ModelMapper mapper, TCIdentityValidator validator, TCIdentityValidator validator1){
+    NeroCustomerManager(CustomerRepository repository, ModelMapper mapper, TCIdentityValidator validator){
         super(repository, mapper);
-        this.validator = validator1;
+        this.validator = validator;
     }
 
     @Override
