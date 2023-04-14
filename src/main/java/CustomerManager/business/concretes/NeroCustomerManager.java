@@ -23,7 +23,7 @@ public class NeroCustomerManager extends CustomerManager {
             if(validator.isIdentityValid(request))
                 super.add(request);
         } catch (Exception e) {
-            throw new RuntimeException("User can not registered");
+            throw new RuntimeException("User can not be registered");
         }
     }
 }
