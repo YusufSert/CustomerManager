@@ -6,15 +6,16 @@ import CustomerManager.business.dto.request.CreateCustomerRequest;
 
 import lombok.AllArgsConstructor;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 
 @Service
-@AllArgsConstructor
 public class MernisService implements TCIdentityValidator {
 
     private final VMFKPSPublicSoap soap;
+    MernisService(VMFKPSPublicSoap soap) {
+        this.soap = soap;
+    }
 
     long nationalityId ;
     String firstName;
