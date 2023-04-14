@@ -24,16 +24,16 @@ public class MernisService implements TCIdentityValidator {
 
     @Override
     public boolean isIdentityValid(CreateCustomerRequest r) throws Exception {
-        mersinRequestSetup(r);
+        initializeLocalVariables(r);
             return soap.TCKimlikNoDogrula(
-                nationalityId,
-                firstName,
-                lastName,
-                dateOfBirth
+                this.nationalityId,
+                this.firstName,
+                this.lastName,
+                this.dateOfBirth
             );
     }
 
-    private void mersinRequestSetup(CreateCustomerRequest r) {
+    private void initializeLocalVariables(CreateCustomerRequest r) {
         this.nationalityId = Long.parseLong(r.getNationalityId());
         this.firstName = r.getFirstName();
         this.lastName = r.getLastName();
