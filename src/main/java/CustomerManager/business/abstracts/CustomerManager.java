@@ -5,11 +5,16 @@ import CustomerManager.business.dto.response.GetCustomerResponse;
 import CustomerManager.entities.Customer;
 import CustomerManager.repo.CustomerRepository;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import org.modelmapper.ModelMapper;
 
-
+@Getter
 @AllArgsConstructor
-public class CustomerManager implements CustomerService {
+//Think of the
+//word “extends” as meaning, “I want
+//to extend the functionality of the
+//superclass”.
+public abstract class CustomerManager {
     private final CustomerRepository repository;
     private final ModelMapper mapper;
 
